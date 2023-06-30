@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scene/shop.gd" type="Script" id=1]
+[ext_resource path="res://bg.png" type="Texture" id=2]
+[ext_resource path="res://cookie.png" type="Texture" id=3]
+[ext_resource path="res://topBar.png" type="Texture" id=4]
+[ext_resource path="res://closeButton.png" type="Texture" id=5]
+
+[node name="shop" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Bg" type="Sprite" parent="."]
+position = Vector2( 234.5, 393 )
+scale = Vector2( 1.06042, 1 )
+texture = ExtResource( 2 )
+
+[node name="TopBar" type="Sprite" parent="."]
+position = Vector2( 241, 101 )
+texture = ExtResource( 4 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 1.0
+margin_top = 51.0
+margin_right = 98.0
+margin_bottom = 148.0
+texture_normal = ExtResource( 3 )
+expand = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 87.0
+margin_top = 59.0
+margin_right = 467.0
+margin_bottom = 140.0
+text = "DAET PLUS 1 K CLIKU"
+align = 1
+valign = 1
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+margin_left = 455.0
+margin_top = 1.0
+margin_right = 480.0
+margin_bottom = 26.0
+texture_normal = ExtResource( 5 )
+expand = true
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_TextureButton2_pressed"]
